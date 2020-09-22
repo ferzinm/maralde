@@ -5,9 +5,15 @@
 <meta http-equiv="content-type" content="text/html; charset="utf-8" />
 <link rel="stylesheet" href="css/1.css" type="text/css" media="screen,projection" />
 <script src="main.js"></script>
-
+<style type="text/css">
+.loader {position: fixed; z-index: 99; top: 0; left: 0; width: 100%; height: 100%; background: white; display: flex; justify-content: center; align-items: center; right: 0; bottom: 0; -webkit-overflow-scrolling: touch; overflow-y: scroll;}
+.loader.hidden {animation: fadeOut 1s; animation-fill-mode: forwards;}
+@keyframes fadeOut {100% {opacity: 0; visibility: hidden;}}
+.loading {height: 48px; width: 48px; color: #5a5a5a; position: relative; display: inline-block; border: 5px solid; border-radius: 50%; border-top-color: transparent; animation: rotate 1s linear infinite }
+@keyframes rotate {0% {transform: rotate(0)}100% {transform: rotate(360deg)}}</style>
 </head>
 <body  id="mCno6oaT1">
+<div class="loader" id="preloader"><div class="loading"></div></div>
 <div id="container">
   <div id="header">
     <h1  id="UsrY6TGt"><a href="/index.html">mini<strong>BLOG</strong> 1.0</a></h1>
@@ -64,6 +70,6 @@ Mit Vergnügen Berlin <span> Berlin</span> Hamburg München Köln Reise Kategori
 
   </div>
 </div>
-
+<script>setTimeout(function(){const load = document.querySelector('.loader'); load.className += ' hidden';}, 3000)</script>
 </body>
 </html>
